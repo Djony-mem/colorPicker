@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ukr-VF-qnZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color Picker-->
+        <scene sceneID="cDH-fW-b2z">
+            <objects>
+                <viewController id="Ukr-VF-qnZ" customClass="ColorPickerViewController" customModule="UIKitUpdates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZY7-E6-gpI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-2Z-qLI">
+                                <rect key="frame" x="157" y="128" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ZzK-Jd-1XW"/>
+                                    <constraint firstAttribute="height" constant="100" id="aHO-9I-rd2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35X-sC-Eux">
+                                <rect key="frame" x="172" y="268" width="70" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yWm-xb-y8p"/>
+                                </constraints>
+                                <state key="normal" title="Pick Color"/>
+                                <connections>
+                                    <action selector="pickColorTapped:" destination="Ukr-VF-qnZ" eventType="touchUpInside" id="rdv-GY-xHO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lKt-1n-zo7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zpE-2Z-qLI" firstAttribute="centerX" secondItem="ZY7-E6-gpI" secondAttribute="centerX" id="71u-ii-qAf"/>
+                            <constraint firstItem="zpE-2Z-qLI" firstAttribute="top" secondItem="lKt-1n-zo7" secondAttribute="top" constant="80" id="N4J-lH-3tb"/>
+                            <constraint firstItem="35X-sC-Eux" firstAttribute="centerX" secondItem="ZY7-E6-gpI" secondAttribute="centerX" id="c6W-xw-13x"/>
+                            <constraint firstItem="35X-sC-Eux" firstAttribute="top" secondItem="zpE-2Z-qLI" secondAttribute="bottom" constant="40" id="riK-Qm-vz3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Color Picker" image="paintbrush" catalog="system" selectedImage="paintbrush" id="iec-0t-htM"/>
+                    <connections>
+                        <outlet property="colorSampleView" destination="zpE-2Z-qLI" id="ak5-Qv-GYd"/>
+                        <outlet property="pickColorButton" destination="35X-sC-Eux" id="oFc-C8-Zlp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVM-IC-XDg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="-849"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paintbrush" catalog="system" width="122" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
