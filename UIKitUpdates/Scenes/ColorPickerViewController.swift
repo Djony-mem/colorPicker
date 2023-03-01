@@ -25,12 +25,12 @@ final class ColorPickerViewController: UIViewController {
     
     private let defaultColor = UIColor.red
     
-    @IBAction func pickColorTapped(_ sender: UIButton) {
-        let picker = UIColorPickerViewController()
-        picker.delegate = self
-        picker.selectedColor = colorSampleView.backgroundColor ?? .black
-        picker.supportsAlpha = false
-        present(picker, animated: true, completion: nil)
+    @IBAction func pickColorTapped() {
+        let pickerVC = UIColorPickerViewController()
+        pickerVC.delegate = self
+        pickerVC.selectedColor = colorSampleView.backgroundColor ?? .black
+        pickerVC.supportsAlpha = false
+        present(pickerVC, animated: true)
     }
 }
 
